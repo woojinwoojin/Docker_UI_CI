@@ -1,0 +1,24 @@
+# push·PR마다 깨끗한 Linux에서 테스트한다. 테스트는 가짜 LLM과 가짜 CSV만 쓰므로 비밀 값(API 키)이 필요 없다.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"  # 로컬과 같은 버전 (Dockerfile도 맞춘다)
+          cache: pip  # requirements.txt가 바뀌지 않으면 다운로드를 재사용한다
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest -rs  # -rs: 건너뛴 테스트가 있으면 이유를 출력한다
