@@ -22,3 +22,13 @@ jobs:
 
       - name: Run tests
         run: pytest -rs  # -rs: 건너뛴 테스트가 있으면 이유를 출력한다
+
+  # 테스트가 통과해야 이미지를 빌드한다. 레지스트리에 올리지는 않는다 (EC2에서 직접 빌드).
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build Docker image
+        run: docker build -t docker-ui-ci .
