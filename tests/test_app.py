@@ -28,6 +28,7 @@ def example_data(monkeypatch):
 def server(tmp_path, monkeypatch):
     monkeypatch.setenv("APP_DATA_DIR", str(tmp_path))
     api.app.dependency_overrides[api.get_model] = lambda: "test-model"
+    api.app.dependency_overrides[api.get_client] = lambda: FakeClient([])  # 실제 OpenAI를 만들지 않는다
     monkeypatch.setattr(ui_client, "make_http", lambda: TestClient(api.app))
     yield
     api.app.dependency_overrides.clear()

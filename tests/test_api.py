@@ -22,6 +22,9 @@ MAPPING = {"date": "Order Date", "sales": "Sales", "order_id": "Order ID", "cust
 def http(tmp_path, monkeypatch) -> TestClient:
     monkeypatch.setenv("APP_DATA_DIR", str(tmp_path))
     api.app.dependency_overrides[api.get_model] = lambda: "test-model"
+    # 기본은 응답이 없는 가짜 LLM. 검증 오류 요청도 의존성(get_client)은 먼저 만들어지므로,
+    # 이게 없으면 OPENAI_API_KEY가 없는 CI에서 실패하고, 로컬에서는 실제 클라이언트가 만들어진다.
+    api.app.dependency_overrides[api.get_client] = lambda: FakeClient([])
     yield TestClient(api.app)
     api.app.dependency_overrides.clear()
 
