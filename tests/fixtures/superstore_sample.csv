@@ -1,0 +1,21 @@
+Row ID,Order ID,Order Date,Ship Date,Ship Mode,Customer ID,Customer Name,Segment,Country,City,State,Postal Code,Region,Product ID,Category,Sub-Category,Product Name,Sales,Quantity,Discount,Profit
+1,US-2016-000001,1/5/2016,1/5/2016,Standard Class,AA-10001,Ana Alves,Consumer,United States,Seattle,Washington,98101,West,FUR-CH-001,Furniture,Chairs,Test Office Chair,300.00,2,0.0,45.00
+2,US-2016-000001,1/5/2016,1/5/2016,Standard Class,AA-10001,Ana Alves,Consumer,United States,Seattle,Washington,98101,West,OFF-PA-003,Office Supplies,Paper,Test Copy Paper,20.00,4,0.0,9.60
+3,US-2016-000002,1/20/2016,1/20/2016,Standard Class,BB-10002,Ben Brooks,Corporate,United States,New York City,New York,10001,East,TEC-PH-005,Technology,Phones,Test Desk Phone,250.00,1,0.2,18.75
+4,US-2016-000003,2/14/2016,2/14/2016,Standard Class,CR-10003,René Côté,Home Office,United States,Houston,Texas,77001,Central,FUR-TA-002,Furniture,Tables,Test Meeting Table,800.00,1,0.5,-320.00
+5,US-2016-000003,2/14/2016,2/14/2016,Standard Class,CR-10003,René Côté,Home Office,United States,Houston,Texas,77001,Central,OFF-BI-004,Office Supplies,Binders,Test Ring Binder,15.00,3,0.2,4.50
+6,US-2016-000004,3/3/2016,3/3/2016,Standard Class,DD-10004,Dana Diaz,Consumer,United States,Atlanta,Georgia,30301,South,TEC-AC-006,Technology,Accessories,Test Wireless Mouse,40.00,2,0.0,12.00
+7,US-2016-000004,3/3/2016,3/3/2016,Standard Class,DD-10004,Dana Diaz,Consumer,United States,Atlanta,Georgia,30301,South,OFF-PA-003,Office Supplies,Paper,Test Copy Paper,25.00,5,0.0,12.00
+8,US-2016-000004,3/3/2016,3/3/2016,Standard Class,DD-10004,Dana Diaz,Consumer,United States,Atlanta,Georgia,30301,South,FUR-CH-001,Furniture,Chairs,Test Office Chair,150.00,1,0.3,-15.00
+9,US-2016-000005,6/18/2016,6/18/2016,Standard Class,AA-10001,Ana Alves,Consumer,United States,Seattle,Washington,98101,West,OFF-BI-004,Office Supplies,Binders,Test Ring Binder,30.00,6,0.0,10.50
+10,US-2016-000006,9/9/2016,9/9/2016,Standard Class,EE-10005,Eli Evans,Corporate,United States,Denver,Colorado,80201,West,TEC-PH-005,Technology,Phones,Test Desk Phone,500.00,2,0.0,120.00
+11,US-2016-000006,9/9/2016,9/9/2016,Standard Class,EE-10005,Eli Evans,Corporate,United States,Denver,Colorado,80201,West,TEC-AC-006,Technology,Accessories,Test Wireless Mouse,60.00,3,0.2,9.00
+12,US-2016-000007,12/24/2016,12/24/2016,Standard Class,FF-10006,Fay Fox,Consumer,United States,Chicago,Illinois,60601,Central,FUR-TA-002,Furniture,Tables,Test Meeting Table,600.00,1,0.4,-90.00
+13,US-2016-000007,12/24/2016,12/24/2016,Standard Class,FF-10006,Fay Fox,Consumer,United States,Chicago,Illinois,60601,Central,OFF-PA-003,Office Supplies,Paper,Test Copy Paper,18.00,3,0.0,8.10
+14,US-2017-000008,1/12/2017,1/12/2017,Standard Class,BB-10002,Ben Brooks,Corporate,United States,New York City,New York,10001,East,FUR-CH-001,Furniture,Chairs,Test Office Chair,450.00,3,0.2,22.50
+15,US-2017-000008,1/12/2017,1/12/2017,Standard Class,BB-10002,Ben Brooks,Corporate,United States,New York City,New York,10001,East,TEC-AC-006,Technology,Accessories,Test Wireless Mouse,35.00,1,0.0,10.50
+16,US-2017-000009,1/30/2017,1/30/2017,Standard Class,CR-10003,René Côté,Home Office,United States,Houston,Texas,77001,Central,OFF-PA-003,Office Supplies,Paper,Test Copy Paper,22.00,4,0.0,10.12
+17,US-2017-000009,1/30/2017,1/30/2017,Standard Class,CR-10003,René Côté,Home Office,United States,Houston,Texas,77001,Central,OFF-BI-004,Office Supplies,Binders,Test Ring Binder,45.00,9,0.7,-36.00
+18,US-2017-000010,2/8/2017,2/8/2017,Standard Class,DD-10004,Dana Diaz,Consumer,United States,Atlanta,Georgia,30301,South,TEC-PH-005,Technology,Phones,Test Desk Phone,270.00,1,0.0,70.20
+19,US-2017-000010,2/8/2017,2/8/2017,Standard Class,DD-10004,Dana Diaz,Consumer,United States,Atlanta,Georgia,30301,South,FUR-CH-001,Furniture,Chairs,Test Office Chair,160.00,1,0.0,32.00
+20,US-2017-000010,2/8/2017,2/8/2017,Standard Class,DD-10004,Dana Diaz,Consumer,United States,Atlanta,Georgia,30301,South,OFF-BI-004,Office Supplies,Binders,Test Ring Binder,12.00,2,0.0,4.20

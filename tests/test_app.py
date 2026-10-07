@@ -4,6 +4,7 @@ TestClient도 httpx.Client라서 ui_client.ApiClient가 그대로 쓸 수 있다
 """
 
 import json
+from pathlib import Path
 
 import httpx
 import pytest
@@ -15,7 +16,12 @@ import ui_client
 from analysis import SUPERSTORE
 from tests.fakes import FINAL, FakeClient, FakeItem, final_response, function_call, response
 
-pytestmark = pytest.mark.skipif(not SUPERSTORE.path.exists(), reason="기본 데이터(data/) 없음")
+
+@pytest.fixture(autouse=True)
+def example_data(monkeypatch):
+    # 실제 Superstore(data/, git 제외) 대신 같은 컬럼·인코딩(cp1252)·날짜 형식의 작은 가짜 CSV를 쓴다.
+    # 로컬과 CI에서 같은 데이터로 검사한다. 20행, 주문 10개, 고객 6명.
+    monkeypatch.setattr(SUPERSTORE, "path", Path(__file__).parent / "fixtures" / "superstore_sample.csv")
 
 
 @pytest.fixture
@@ -37,7 +43,8 @@ def test_example_dataset_shows_kpis(server):
     assert not at.exception
     assert not at.error
     assert [m.label for m in at.metric] == ["총 매출 (USD)", "총 이익 (USD)", "주문 수", "고객 수"]
-    assert at.metric[2].value == "5,009"
+    assert at.metric[2].value == "10"  # 행은 20개지만 주문은 10개 (한 주문에 여러 행)
+    assert at.metric[3].value == "6"
     assert len(at.chat_input) == 1  # 질문은 사용자가 입력해야만 보낸다 (자동으로 LLM을 부르지 않음)
 
 
